@@ -64,23 +64,18 @@ let g:python_highlight_all = 1
 set showtabline=2
 noremap <C-N> gt
 
-
 set modifiable
 set write
-
 
 
 " Latex
 let g:Tex_AutoFolding=0
 
 
-
 if has('vim_starting')
    " 初回起動時のみruntimepathにneobundleのパスを指定する
    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
-
 
 " NeoBundleを初期化
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -114,6 +109,90 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
     " call neobundle#end()
     NeoBundle 'Shougo/neocomplcache'
+    highlight Pmenu ctermbg=4
+    highlight PmenuSel ctermbg=1
+    highlight PMenuSbar ctermbg=4
+
+    " 補完ウィンドウの設定
+    set completeopt=menuone
+
+    " 補完ウィンドウの設定
+    set completeopt=menuone
+
+    " rsenseでの自動補完機能を有効化
+    let g:rsenseUseOmniFunc = 1
+    " let g:rsenseHome = '/usr/local/lib/rsense-0.3'
+
+    " auto-ctagsを使ってファイル保存時にtagsファイルを更新
+    let g:auto_ctags = 1
+
+    " 起動時に有効化
+    let g:neocomplcache_enable_at_startup = 1
+
+    " 大文字が入力されるまで大文字小文字の区別を無視する
+    let g:neocomplcache_enable_smart_case = 1
+
+    " _(アンダースコア)区切りの補完を有効化
+    let g:neocomplcache_enable_underbar_completion = 1
+    let g:neocomplcache_enable_camel_case_completion  =  1
+
+    " 最初の補完候補を選択状態にする
+    " let g:neocomplcache_enable_auto_select = 1
+
+    " ポップアップメニューで表示される候補の数
+    let g:neocomplcache_max_list = 20
+
+    " シンタックスをキャッシュするときの最小文字長
+    let g:neocomplcache_min_syntax_length = 3
+
+    " 補完の設定
+    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+    if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+    endif
+        let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
+
+    if !exists('g:neocomplete#keyword_patterns')
+        let g:neocomplete#keyword_patterns = {}
+    endif
+        let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+
+
+
+    " " AutoComplPopを無効にする
+    " let g:acp_enableAtStartup = 0
+    " " neocomplcacheを有効にする
+    " let g:neocomplcache_enable_at_startup = 1
+    " " 入力値に大文字が含まれている場合は、大文字・小文字を無視しない
+    " let g:neocomplcache_enable_smart_case = 1
+    " " Set minimum syntax keyword length.
+    " let g:neocomplcache_min_syntax_length = 3
+    " let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+    "
+    " " Define dictionary.
+    " let g:neocomplcache_dictionary_filetype_lists = {
+    "     \ 'default' : ''
+    "     \ }
+    "
+    " " Plugin key-mappings.
+    " inoremap <expr><C-g>     neocomplcache#undo_completion()
+    " inoremap <expr><C-l>     neocomplcache#complete_common_string()
+    "
+    " " Recommended key-mappings.
+    " " <CR>: close popup and save indent.
+    " inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+    " function! s:my_cr_function()
+    "     return neocomplcache#smart_close_popup() . "\<CR>"
+    " endfunction
+    " " <TAB>: completion.
+    " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+    " " <C-h>, <BS>: close popup and delete backword char.
+    " inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+    " inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+    " inoremap <expr><C-y>  neocomplcache#close_popup()
+    " inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
     NeoBundle 'Shougo/neosnippet'
     NeoBundle 'Shougo/neosnippet-snippets'
 
@@ -160,6 +239,137 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
     " Gitの設定
     NeoBundle 'tpope/vim-fugitive'
+
+    " VimShell
+    NeoBundle 'Shougo/vimshell.vim' 
+    "ウインドウを分割してシェルを起動
+    nnoremap <silent> vs :VimShell<CR>
+    nmap <silent> vp :<C-u>VimShellPop<CR> 
+    "現在のディレクトリを表示
+    let g:vimshell_prompt_expr = 'getcwd()." > "'
+    let g:vimshell_prompt_pattern = '^\f\+ > '
+
+
+    " lightlineの設定
+    NeoBundle 'itchyny/lightline.vim' 
+    let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ 'mode_map': {'c': 'NORMAL'},
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+        \ },
+        \ 'component_function': {
+        \   'modified': 'LightlineModified',
+        \   'readonly': 'LightlineReadonly',
+        \   'fugitive': 'LightlineFugitive',
+        \   'filename': 'LightlineFilename',
+        \   'fileformat': 'LightlineFileformat',
+        \   'filetype': 'LightlineFiletype',
+        \   'fileencoding': 'LightlineFileencoding',
+        \   'mode': 'LightlineMode'
+        \ }
+        \ }
+
+    function! LightlineModified()
+        return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+    endfunction
+
+    function! LightlineReadonly()
+        return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
+    endfunction
+
+    function! LightlineFilename()
+        return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+            \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+            \  &ft == 'unite' ? unite#get_status_string() :
+            \  &ft == 'vimshell' ? vimshell#get_status_string() :
+            \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
+            \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+    endfunction
+
+    function! LightlineFugitive()
+        if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
+            return fugitive#head()
+        else
+            return ''
+        endif
+    endfunction
+
+    function! LightlineFileformat()
+        return winwidth(0) > 70 ? &fileformat : ''
+    endfunction
+
+    function! LightlineFiletype()
+        return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
+    endfunction
+
+    function! LightlineFileencoding()
+        return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+    endfunction
+
+    function! LightlineMode()
+        return winwidth(0) > 60 ? lightline#mode() : ''
+    endfunction
+
+    NeoBundle     'Shougo/neocomplete'
+
+    if neobundle#tap('neocomplete')
+        call neobundle#config({
+        \   'depends': ['Shougo/context_filetype.vim', 'ujihisa/neco-look', 'pocke/neco-gh-issues', 'Shougo/neco-syntax'],
+        \ })
+
+        " 起動時に有効化
+        let g:neocomplete#enable_at_startup = 1
+        " 大文字が入力されるまで大文字小文字の区別を無視する
+        let g:neocomplete#enable_smart_case = 1
+        " _(アンダースコア)区切りの補完を有効化
+        let g:neocomplete#enable_underbar_completion = 1
+        let g:neocomplete#enable_camel_case_completion  =  1
+        " ポップアップメニューで表示される候補の数
+        let g:neocomplete#max_list = 20
+        " シンタックスをキャッシュするときの最小文字長
+        let g:neocomplete#sources#syntax#min_keyword_length = 3
+        " 補完を表示する最小文字数
+        let g:neocomplete#auto_completion_start_length = 2
+        " preview window を閉じない
+        let g:neocomplete#enable_auto_close_preview = 0
+        " AutoCmd InsertLeave * silent! pclose!
+
+        let g:neocomplete#max_keyword_width = 10000
+
+
+        if !exists('g:neocomplete#delimiter_patterns')
+            let g:neocomplete#delimiter_patterns= {}
+        endif
+            let g:neocomplete#delimiter_patterns.ruby = ['::']
+
+        if !exists('g:neocomplete#same_filetypes')
+            let g:neocomplete#same_filetypes = {}
+        endif
+            let g:neocomplete#same_filetypes.ruby = 'eruby'
+
+
+        if !exists('g:neocomplete#force_omni_input_patterns')
+            let g:neocomplete#force_omni_input_patterns = {}
+        endif
+
+        let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+        let g:neocomplete#force_omni_input_patterns.typescript = '[^. \t]\.\%(\h\w*\)\?' " Same as JavaScript
+        let g:neocomplete#force_omni_input_patterns.go = '[^. \t]\.\%(\h\w*\)\?'         " Same as JavaScript
+
+        let s:neco_dicts_dir = $HOME . '/dicts'
+        if isdirectory(s:neco_dicts_dir)
+            let g:neocomplete#sources#dictionary#dictionaries = {
+            \   'ruby': s:neco_dicts_dir . '/ruby.dict',
+            \   'javascript': s:neco_dicts_dir . '/jquery.dict',
+            \ }
+        endif
+        let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete'
+
+        " call neocomplete#custom#source('look', 'min_pattern_length', 1)
+
+        call neobundle#untap()
+endif
 
 call neobundle#end()
 " ファイルタイプ別のプラグイン/インデントを有効にする
