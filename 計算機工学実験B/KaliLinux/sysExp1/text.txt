@@ -1,0 +1,6 @@
+BSSID:
+    84:DB:AC:FF:B3:64
+ESSID:
+    sysExp1
+得られた通信内容:
+    hello world

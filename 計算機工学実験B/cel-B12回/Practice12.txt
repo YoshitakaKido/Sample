@@ -1,0 +1,167 @@
+user@hw0016:~$ sudo stop network-manager
+network-manager stop/waiting
+
+user@hw0016:~$ sudo ifconfig eth4 192.168.254.100 up
+
+user@hw0016:~$ ssh root@192.168.254.254
+root@192.168.254.254's password: 
+Linux obsax3 3.2.54 #1 SMP Tue Jun 17 12:25:14 JST 2014 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Jun 23 16:58:31 2017 from 192.168.254.100
+
+
+
+
+/* br-expという名前のブリッジを新規に生成 */
+root@obsax3:~# ovs-vsctl add-br br-exp
+
+
+/* 生成したブリッジbr-expがOpenFlowバージョン1.3で動作するように規定 */
+root@obsax3:~# ovs-vsctl set bridge br-exp protocols=OpenFlow13
+
+
+/* 
+   生成したブリッジbr-expにポートを設定する
+   本実験では、通信用ホストを接続する２つの実ポートETHER-2, ETHER-3(インターフェース名eth2, eth3)と対応付ける。
+*/
+root@obsax3:~# ovs-vsctl add-port br-exp eth2
+root@obsax3:~# ovs-vsctl add-port br-exp eth3
+
+
+/* 生成したブリッジbr-expの状態確認 */
+root@obsax3:~# ovs-vsctl show
+ce658c73-54c9-4f28-ab4a-aab2c9a376c0
+    Bridge br-exp
+        Port "eth3"
+            Interface "eth3"
+        Port "eth2"
+            Interface "eth2"
+        Port br-exp
+            Interface br-exp
+                type: internal
+    ovs_version: "2.3.2"
+
+
+/* 生成したブリッジbr-expにIPアドレス192.168.100.100を設定する */
+root@obsax3:~# ifconfig br-exp 192.168.100.100 up
+
+
+/* 通信用ホストを接続している２つのアダプタ(ETHER-2およびETHER-3)を起動する */
+root@obsax3:~# ifconfig eth2 up
+root@obsax3:~# ifconfig eth3 up
+
+
+/* OpenFlowスイッチとしてブリッジbr-expの状態を確認 */
+root@obsax3:~# ovs-ofctl show br-exp
+OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:0000000a85071b9e
+n_tables:254, n_buffers:256
+capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS
+OFPST_PORT_DESC reply (OF1.3) (xid=0x3):
+ 1(eth2): addr:00:0a:85:07:1b:9e
+     config:     0
+     state:      0
+     current:    1GB-FD AUTO_NEG
+     advertised: 10MB-HD 10MB-FD 100MB-HD 100MB-FD 1GB-HD 1GB-FD
+     supported:  10MB-HD 10MB-FD 100MB-HD 100MB-FD 1GB-FD COPPER AUTO_NEG
+     speed: 1000 Mbps now, 1000 Mbps max
+ 2(eth3): addr:00:0a:85:07:1b:9f
+     config:     0
+     state:      0
+     current:    1GB-FD AUTO_NEG
+     advertised: 10MB-HD 10MB-FD 100MB-HD 100MB-FD 1GB-HD 1GB-FD
+     supported:  10MB-HD 10MB-FD 100MB-HD 100MB-FD 1GB-FD COPPER AUTO_NEG
+     speed: 1000 Mbps now, 1000 Mbps max
+ LOCAL(br-exp): addr:00:0a:85:07:1b:9e
+     config:     0
+     state:      0
+     speed: 0 Mbps now, 0 Mbps max
+OFPT_GET_CONFIG_REPLY (OF1.3) (xid=0x5): frags=normal miss_send_len=0
+
+
+/* フローテーブルの内容を確認 */
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=1516.768s, table=0, n_packets=8, n_bytes=642, priority=0 actions=NORMAL
+
+
+/* 
+   初期状態では上記のように、デフォルトでフローエントリが１つ出力される。
+   本実験ではエントリが無い状態から実験を開始するため、下記のように入力してエントリを削除する
+*/
+root@obsax3:~# ovs-ofctl del-flows br-exp
+
+
+/* エントリが削除されたことの確認 (state1) */
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+
+
+/* エントリ(パケットを破棄)を登録 (state2) */
+root@obsax3:~# ovs-ofctl add-flow br-exp 'priority=0, actions=drop'
+
+
+/* 
+   フローテーブルの状態を確認 (state3)
+   カウント値(n_packets)が12と確認できる
+*/
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=180.110s, table=0, n_packets=12, n_bytes=720, priority=0 actions=drop
+
+
+/* エントリ(2番ポートに届いたら、1番ポートに転送)を登録 (state4) */
+root@obsax3:~# ovs-ofctl add-flow br-exp 'priority=10, in_port=2, actions=output:1'
+
+
+/* 
+   フローテーブルの状態を確認 (state5)
+   1番ポートから2番ポートにpingを行ったのでエントリ(2番ポートに届いたら、1番ポートに転送)が起こり
+   2行目のn_packetsが0でないことがわかる。
+   また、2番ポートから1番ポートにも転送が起こっているが、エントリ(1番ポートに届いたら、2番ポートに転送)が
+   存在しないので、エントリ(パケットを破棄)が起こり、1行目のn_packetsも増えていることがわかる。
+*/
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=665.207s, table=0, n_packets=28, n_bytes=2079, priority=0 actions=drop
+ cookie=0x0, duration=18.833s, table=0, n_packets=1, n_bytes=87, priority=10,in_port=2 actions=output:1
+
+
+/* フローテーブルの状態を確認 (state7) */
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=852.089s, table=0, n_packets=42, n_bytes=2946, priority=0 actions=drop
+ cookie=0x0, duration=205.715s, table=0, n_packets=15, n_bytes=981, priority=10,in_port=2 actions=output:1
+
+
+/* エントリ(1番ポートに届いたら、2番ポートに転送 (state8) */
+root@obsax3:~# ovs-ofctl add-flow br-exp 'priority=10, in_port=1, actions=output:2'
+
+
+/* 
+   フローテーブルの状態を確認 (state9)
+   エントリ(1番ポートに届いたら、2番ポートに転送)が追加された為、
+   エントリ(パケットを破棄)に通ることがなくなった為、
+   1行目のn_packetsが増えていないことが確認できる
+*/
+root@obsax3:~# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=1001.802s, table=0, n_packets=42, n_bytes=2946, priority=0 actions=drop
+ cookie=0x0, duration=23.049s, table=0, n_packets=19, n_bytes=1824, priority=10,in_port=1 actions=output:2
+ cookie=0x0, duration=355.428s, table=0, n_packets=35, n_bytes=2892, priority=10,in_port=2 actions=output:1
+
+
+
+
+
+
+
+
+
+
+

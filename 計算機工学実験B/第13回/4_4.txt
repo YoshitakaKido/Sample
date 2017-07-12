@@ -1,0 +1,41 @@
+root@obsax3:~/cel-b# trema run ./hello-trema.rb 
+Hello, Trema!
+Hello, 0xa85071b9e!
+
+コード5
+ping前
+root@obsax3:~/cel-b# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=100.400s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=0 actions=drop
+
+両方からping
+root@obsax3:~/cel-b# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=708.733s, table=0, n_packets=66, n_bytes=3960, send_flow_rem priority=0 actions=drop
+
+コード6
+ping前
+root@obsax3:~/cel-b# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=4.640s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=0 actions=drop
+ cookie=0x2, duration=4.640s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=10,in_port=2 actions=output:1
+両方からping 
+root@obsax3:~/cel-b# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=85.491s, table=0, n_packets=78, n_bytes=6010, send_flow_rem priority=0 actions=drop
+ cookie=0x2, duration=85.491s, table=0, n_packets=27, n_bytes=1620, send_flow_rem priority=10,in_port=2 actions=output:1
+
+逆向きの追加
+ping前
+root@obsax3:~/cel-b# ovs-ofctl dump-flows br-exp
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=4.162s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=0 actions=drop
+ cookie=0x3, duration=4.162s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=10,in_port=1 actions=output:2
+ cookie=0x2, duration=4.162s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=10,in_port=2 actions=output:1
+両方からping
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x1, duration=45.055s, table=0, n_packets=0, n_bytes=0, send_flow_rem priority=0 actions=drop
+ cookie=0x3, duration=45.055s, table=0, n_packets=26, n_bytes=2548, send_flow_rem priority=10,in_port=1 actions=output:2
+ cookie=0x2, duration=45.055s, table=0, n_packets=26, n_bytes=2548, send_flow_rem priority=10,in_port=2 actions=output:1
+
+

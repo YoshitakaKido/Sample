@@ -1,0 +1,13 @@
+4.2節の出力結果
+root@obsax3:~/cel-b# trema run ./hello-trema.rb 
+Hello, Trema!
+^C
+terminated
+
+4.3節の出力結果
+root@obsax3:~/cel-b# trema run ./hello-trema.rb 
+Hello, Trema!
+Hello, 0xa85071b9e!
+^C
+terminated
+root@obsax3:~/cel-b# 

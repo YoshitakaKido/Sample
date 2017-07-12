@@ -1,0 +1,570 @@
+This is e-upTeX, Version 3.14159265-p3.6-u1.20-141210-2.6 (utf8.uptex) (TeX Live 2015) (preloaded format=uplatex 2016.2.17)  17 APR 2017 17:39
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**s153038-0.tex
+(./s153038-0.tex
+pLaTeX2e <2011/05/07u00>+0 (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9n> and hyphenation patterns for 80 languages loaded.
+(./celb-report.cls
+
+LaTeX Warning: You have requested document class `celb-report',
+               but the document class provides `celbpreport'.
+
+Document Class: celbpreport 2017/03/08 計算機工学実験Bレポート
+(/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls
+Document Class: jsarticle 2014/02/07 okumura
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:330: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.330 ...c}{m}{n}{<-> s * [0.961] \jsc@pfx@ jis}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:331: LaTe
+X Error: Font family `JY1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 ...}{m}{n}{<-> s * [0.961] \jsc@pfx@ jisg}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:332: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.332 ...m}{n}{<-> s * [0.961] \jsc@pfx@ tmin10}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:333: LaTe
+X Error: Font family `JT1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...}{n}{<-> s * [0.961] \jsc@pfx@ tgoth10}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:338: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.338 ...pe{\jsc@JYn}{mc}{m}{it}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:339: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.339 ...pe{\jsc@JYn}{mc}{m}{sl}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:340: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.340 ...pe{\jsc@JYn}{mc}{m}{sc}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:341: LaTe
+X Error: Font family `JY1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...pe{\jsc@JYn}{gt}{m}{it}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:342: LaTe
+X Error: Font family `JY1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.342 ...pe{\jsc@JYn}{gt}{m}{sl}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:343: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...e{\jsc@JYn}{mc}{bx}{it}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:344: LaTe
+X Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.344 ...e{\jsc@JYn}{mc}{bx}{sl}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:345: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 ...pe{\jsc@JTn}{mc}{m}{it}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:346: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.346 ...pe{\jsc@JTn}{mc}{m}{sl}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:347: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.347 ...pe{\jsc@JTn}{mc}{m}{sc}{<->ssub*mc/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:348: LaTe
+X Error: Font family `JT1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.348 ...pe{\jsc@JTn}{gt}{m}{it}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:349: LaTe
+X Error: Font family `JT1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.349 ...pe{\jsc@JTn}{gt}{m}{sl}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:350: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.350 ...e{\jsc@JTn}{mc}{bx}{it}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:351: LaTe
+X Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.351 ...e{\jsc@JTn}{mc}{bx}{sl}{<->ssub*gt/m/n}{}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Info: Redefining \rmfamily on input line 352.
+LaTeX Info: Redefining \sffamily on input line 355.
+LaTeX Info: Redefining \ttfamily on input line 358.
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:421: LaTe
+X Error: Encoding scheme `JY1' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 ...areSymbolFont{mincho}{\jsc@JYn}{mc}{m}{n}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:422: LaTe
+X Error: Unknown symbol font `mincho'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.422 ...eclareSymbolFontAlphabet{\mathmc}{mincho}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:423: LaTe
+X Error: Encoding scheme `JY1' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...bolFont{mincho}{bold}{\jsc@JYn}{gt}{m}{n}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:424: Miss
+ing number, treated as zero.
+<to be read again> 
+                   \symmincho 
+l.424     \jfam\symmincho
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+/usr/local/texlive/2015/texmf-dist/tex/platex/jsclasses/jsarticle.cls:425: LaTe
+X Error: Encoding scheme `JY1' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...MathAlphabet{\mathgt}{\jsc@JYn}{gt}{m}{n}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 613.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 613.
+\fullwidth=\dimen118
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 760.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 760.
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\@abstractbox=\box41
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\js@tocl@width=\dimen119
+\@lnumwidth=\dimen120
+\bibindent=\dimen121
+LaTeX Info: Redefining \TeX on input line 1731.
+LaTeX Info: Redefining \LaTeX on input line 1757.
+LaTeX Info: Redefining \LaTeXe on input line 1782.
+\heisei=\count89
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen122
+\Gm@wd@mp=\dimen123
+\Gm@odd@mp=\dimen124
+\Gm@even@mp=\dimen125
+\Gm@layoutwidth=\dimen126
+\Gm@layoutheight=\dimen127
+\Gm@layouthoffset=\dimen128
+\Gm@layoutvoffset=\dimen129
+\Gm@dimlist=\toks16
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvipdfmx.def on input line 143.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+File: dvipdfmx.def 2015/11/04 v4.07 LaTeX color/graphics driver for dvipdfmx (T
+eX Live/ChoF)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 95.
+)
+\Gin@req@height=\dimen130
+\Gin@req@width=\dimen131
+)
+(./listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box42
+\lst@token=\toks17
+\lst@length=\count94
+\lst@currlwidth=\dimen132
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen133
+\lst@width=\dimen134
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen135
+ (./lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box43
+) (./listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (./jlisting.sty
+Package: jlisting 2006/02/20 0.2 (Thor)
+\lst@nextchar=\count101
+\lst@inputfile=\read1
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)) (./s153038-0.aux)
+\openout1 = `s153038-0.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(28.45274pt, 759.6886pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-82.27516pt
+* \headheight=20.0pt
+* \headsep=18.45792pt
+* \topskip=10.0pt
+* \footskip=28.45792pt
+* \marginparwidth=19.24438pt
+* \marginparsep=19.24438pt
+* \columnsep=19.24438pt
+* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count102
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 18.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 18.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 18.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 18.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 25.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 25.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 25.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 25.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 35.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 35.
+File: sample-figure.eps Graphic file (type eps)
+<sample-figure.eps>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 55.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 55.
+ [1
+
+] [2] [3] [4] [5] (./s153038-0.aux) ) 
+Here is how much of TeX's memory you used:
+ 2889 strings out of 493715
+ 40281 string characters out of 6150756
+ 109800 words of memory out of 5000000
+ 6439 multiletter control sequences out of 15000+600000
+ 9518 words of font info for 48 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 33i,5n,34p,554b,973s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on s153038-0.dvi (5 pages, 8476 bytes).

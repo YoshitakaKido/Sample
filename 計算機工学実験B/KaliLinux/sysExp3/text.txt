@@ -1,0 +1,6 @@
+BSSID:
+    F4:9F:F3:D4:B3:74
+ESSID:
+    sysExp3
+得られた情報:
+    hello

@@ -1,0 +1,6 @@
+BSSID:
+    F4:9F:F3:D4:C6:EC
+ESSID:
+    sysExp2
+得られた情報:
+    saba

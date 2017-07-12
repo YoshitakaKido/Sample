@@ -1,0 +1,155 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.2.9)  7 APR 2017 17:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**listings.ins
+(./listings.ins
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9o> and hyphenation patterns for 80 language(s) loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count81
+\emptyLines=\count82
+\processedLines=\count83
+\commentsRemoved=\count84
+\commentsPassed=\count85
+\codeLinesPassed=\count86
+\TotalprocessedLines=\count87
+\TotalcommentsRemoved=\count88
+\TotalcommentsPassed=\count89
+\TotalcodeLinesPassed=\count90
+\NumberOfFiles=\count91
+\inFile=\read1
+\inputcheck=\read2
+\off@0=\count92
+\off@1=\count93
+\off@2=\count94
+\off@3=\count95
+\off@4=\count96
+\off@5=\count97
+\off@6=\count98
+\off@7=\count99
+\off@8=\count100
+\off@9=\count101
+\off@10=\count102
+\off@11=\count103
+\off@12=\count104
+\off@13=\count105
+\off@14=\count106
+\off@15=\count107
+\@maxfiles=\count108
+\@maxoutfiles=\count109
+
+Utility: `docstrip' 2.5e <2014/09/29>
+English documentation    <2014/09/29>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./listings.sty ./lstmisc.sty ./lstdoc.sty ./lstdrvrs.ins ./l
+istings.cfg 
+\openout0 = `./listings.sty'.
+
+\openout1 = `./lstmisc.sty'.
+
+\openout2 = `./lstdoc.sty'.
+
+
+Processing file listings.dtx (kernel) -> listings.sty
+                             (misc,0.21) -> lstmisc.sty
+                             (doc) -> lstdoc.sty
+File listings.dtx ended by \endinput.
+Lines  processed: 16659
+Comments removed: 11804
+Comments  passed: 12
+Codelines passed: 4746
+
+\openout0 = `./lstdrvrs.ins'.
+
+\openout1 = `./listings.cfg'.
+
+
+Processing file lstdrvrs.dtx (install) -> lstdrvrs.ins
+                             (config) -> listings.cfg
+File lstdrvrs.dtx ended by \endinput.
+Lines  processed: 7491
+Comments removed: 2105
+Comments  passed: 293
+Codelines passed: 4882
+
+(./lstdrvrs.ins
+
+Generating file(s) ./lstlang1.sty ./lstlang2.sty ./lstlang3.sty 
+\openout0 = `./lstlang1.sty'.
+
+\openout1 = `./lstlang2.sty'.
+
+\openout2 = `./lstlang3.sty'.
+
+
+Processing file lstdrvrs.dtx (lang1) -> lstlang1.sty
+                             (lang2) -> lstlang2.sty
+                             (lang3) -> lstlang3.sty
+File lstdrvrs.dtx ended by \endinput.
+Lines  processed: 7491
+Comments removed: 2105
+Comments  passed: 293
+Codelines passed: 4882
+
+
+Generating file(s) ./listings-acm.prf ./listings-bash.prf ./listings-fortran.pr
+f ./listings-lua.prf ./listings-python.prf 
+\openout0 = `./listings-acm.prf'.
+
+\openout1 = `./listings-bash.prf'.
+
+\openout2 = `./listings-fortran.prf'.
+
+\openout3 = `./listings-lua.prf'.
+
+\openout4 = `./listings-python.prf'.
+
+
+Processing file lstdrvrs.dtx (acm-prf) -> listings-acm.prf
+                             (bash-prf) -> listings-bash.prf
+                             (fortran-prf) -> listings-fortran.prf
+                             (lua-prf) -> listings-lua.prf
+                             (python-prf) -> listings-python.prf
+File lstdrvrs.dtx ended by \endinput.
+Lines  processed: 7491
+Comments removed: 2105
+Comments  passed: 293
+Codelines passed: 4882
+
+)
+*
+* You probably need to move all created `.sty' and `.cfg'
+* files into a directory searched by TeX.
+*
+* And don't forget to refresh your filename database
+* if your TeX distribution uses such a database.
+*
+Overall statistics:
+Files  processed: 4
+Lines  processed: 39132
+Comments removed: 18119
+Comments  passed: 891
+Codelines passed: 19392
+ ) 
+Here is how much of TeX's memory you used:
+ 431 strings out of 493730
+ 4704 string characters out of 6151153
+ 62856 words of memory out of 5000000
+ 4050 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 14i,0n,16p,287b,195s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.

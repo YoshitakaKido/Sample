@@ -1,0 +1,11 @@
+user@hw0011:~$ ping 192.168.100.102
+PING 192.168.100.102 (192.168.100.102) 56(84) bytes of data.
+64 bytes from 192.168.100.102: icmp_seq=1 ttl=64 time=0.035 ms
+64 bytes from 192.168.100.102: icmp_seq=2 ttl=64 time=0.051 ms
+64 bytes from 192.168.100.102: icmp_seq=3 ttl=64 time=0.052 ms
+64 bytes from 192.168.100.102: icmp_seq=4 ttl=64 time=0.043 ms
+64 bytes from 192.168.100.102: icmp_seq=5 ttl=64 time=0.046 ms
+64 bytes from 192.168.100.102: icmp_seq=6 ttl=64 time=0.025 ms
+64 bytes from 192.168.100.102: icmp_seq=7 ttl=64 time=0.024 ms
+64 bytes from 192.168.100.102: icmp_seq=8 ttl=64 time=0.056 ms
+^C
